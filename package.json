@@ -1,0 +1,19 @@
+{
+  "name": "project-tracking-info",
+  "version": "1.0.0",
+  "description": "Web Site",
+  "main": "index.js",
+  "scripts": {
+    "scripts": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pivanta/Project-Tracking-Info.git"
+  },
+  "author": "Abdul Basit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pivanta/Project-Tracking-Info/issues"
+  },
+  "homepage": "https://github.com/Pivanta/Project-Tracking-Info#readme"
+}
