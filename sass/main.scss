@@ -1,3 +1,4 @@
+// GLOBAL
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 
@@ -42,17 +43,24 @@ h5,
 footer {
   font-size: 0.8rem;
 }
+// END OF GLOBAL
+
+// MAIN WRAPPER
 .main_wrapper {
   width: 80%;
   max-width: 1000px;
   margin: auto;
 }
+// END OF MAIN WRAPPER
+
+// HEADER
 header {
   display: flex;
   position: relative;
   align-items: center;
   margin-top: 2.5rem;
 }
+// MOBILE MENU ICONS
 .open {
   visibility: hidden;
   position: absolute;
@@ -66,6 +74,9 @@ header {
   position: absolute;
   right: 0;
 }
+// END OF MOBILE MENU ICONS
+
+// NAV BAR
 nav {
   position: absolute;
   right: 0;
@@ -94,10 +105,15 @@ nav {
     overflow: hidden;
   }
 }
+// END OF NAV BAR
+// END OF HEADER
+
+// ARTICLE CONTAINER
 .article_container {
   width: 100%;
   position: relative;
 }
+// IMAGE CONTAINER
 .image_container {
   position: absolute;
   left: 50%;
@@ -107,6 +123,9 @@ nav {
   width: 850px;
   height: auto;
 }
+// END OF IMAGE CONTAINER
+
+// HEADINGS
 .headings {
   max-width: 470px;
   margin: 2rem 0;
@@ -168,12 +187,19 @@ nav {
     font-weight: 400;
   }
 }
+// END OF HEADINGS
+// END OF ARTICLE CONTAINER
+
+// FOOTER
 footer {
   margin: 4rem 0;
   text-align: center;
   width: 100%;
   font-family: "Barlow";
 }
+// END OF FOOTER
+
+// MOBILE 600PZ
 
 @media only screen and (max-width: 600px) {
   body {
@@ -266,6 +292,9 @@ footer {
     }
   }
 }
+//  END OF MOBILE 600PX
+
+// MOBILE 600PX TO 1000PX
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
   body {
@@ -352,3 +381,4 @@ footer {
     }
   }
 }
+// END OF MOBILE 600PX TO 1000PX
