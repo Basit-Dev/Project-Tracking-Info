@@ -9,20 +9,24 @@
 
   <title>Frontend Mentor | Project tracking intro component</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script src="main.js"></script>
 </head>
 
-<body>
+<body id="body">
 
   <main class="main_wrapper">
     <div class="bg_image"></div>
     <header>
-      <div class="hamburger">
-        <img src="/images/icon-hamburger.svg" alt="Mobile Menu Icon">
+      <div onclick="myFunction()">
+        <div>
+          <img class="open" src="/images/icon-hamburger.svg" alt="Mobile Menu Icon">
+          <img class="close" src="/images/icon-close.svg" alt="">
+        </div>
       </div>
       <div class="logo">
         <a href="/"><img src="images/logo.svg" alt="Logo Icon"></a>
       </div>
-      <nav>
+      <nav id="myDropdown" class="dropdown_content">
         <ul>
           <li>Product</li>
           <li>Features</li>
@@ -50,7 +54,6 @@
           <h5>to see a live preview</h5>
         </div>
       </div>
-
     </article>
   </main>
   <footer>

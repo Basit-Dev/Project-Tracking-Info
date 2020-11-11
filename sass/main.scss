@@ -8,29 +8,24 @@
 }
 body {
   min-height: 100vh;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden hidden;
 }
 .bg_image {
   position: absolute;
   background: #eef3f6;
   min-height: 450px;
   top: 0;
-  bottom: 50%;
+  bottom: 1000px;
   right: 0;
   left: 50%;
   z-index: -1;
   border-radius: 0 0 0 60px;
 }
-
 html,
 button {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 112.5%;
   font-weight: 700;
-}
-.hamburger {
-  display: none;
 }
 nav,
 .top_heading,
@@ -49,14 +44,27 @@ footer {
 }
 .main_wrapper {
   width: 80%;
+  max-width: 1000px;
   margin: auto;
-  // border: solid red;
 }
 header {
   display: flex;
   position: relative;
   align-items: center;
   margin-top: 2.5rem;
+}
+.open {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  :hover {
+    cursor: pointer;
+  }
+}
+.close {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
 }
 nav {
   position: absolute;
@@ -88,15 +96,21 @@ nav {
 }
 .article_container {
   width: 100%;
-  margin: 2rem 0;
   position: relative;
-  // border: solid rgb(95, 95, 95);
+}
+.image_container {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+}
+.image_container img {
+  width: 850px;
+  height: auto;
 }
 .headings {
   max-width: 470px;
-  margin: 3rem 0;
-  padding: 3rem 0;
-  // border: solid green;
+  margin: 2rem 0;
+  padding: 6rem 0;
 }
 .top_heading {
   margin-bottom: 1rem;
@@ -155,21 +169,10 @@ nav {
   }
 }
 footer {
-  margin: 2rem 0;
+  margin: 4rem 0;
   text-align: center;
   width: 100%;
   font-family: "Barlow";
-}
-
-.image_container {
-  position: absolute;
-  left: 50%;
-  top: 70px;
-  // border: solid blue;
-}
-.image_container img {
-  width: 850px;
-  height: auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -181,14 +184,47 @@ footer {
   }
   header {
     margin: 2rem 0 3rem 0;
+    position: relative;
   }
-  nav {
-    visibility: hidden;
-  }
-  .hamburger {
+  .open {
+    visibility: visible;
     display: block;
+  }
+  .toggle_cta {
+    .open {
+      visibility: hidden;
+    }
+    .close {
+      visibility: visible;
+      // border: solid 1pt rgb(107, 159, 176);
+    }
+  }
+  .dropdown_content {
+    display: none;
     position: absolute;
-    right: 0;
+    top: 60px;
+    width: 100%;
+    height: fit-content;
+    padding: 0.3rem 0;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    li {
+      display: block;
+      text-align: center;
+      margin: 1rem;
+      font-size: 1.3rem;
+      span {
+        display: none;
+      }
+    }
+    ul li:nth-child(3) {
+      border-bottom: solid 1pt hsl(231, 7%, 65%);
+      padding-bottom: 1.2rem;
+    }
+  }
+  .show {
+    display: block;
   }
   .demo_cta h5 {
     letter-spacing: 1.3px;
@@ -197,18 +233,18 @@ footer {
   .article_container {
     margin: 0 0;
     width: 100%;
-    // border: solid green;
   }
   .image_container {
     position: relative;
-    width: auto;
-    height: auto;
     left: -30px;
     top: 0;
-    // background-color: salmon;
+    // Make img smaller with fixed width
+    img {
+      width: 550px;
+    }
   }
-  .image_container img {
-    width: 550px;
+  .headings {
+    padding: 2rem 0;
   }
   .top_heading {
     h4 {
@@ -219,7 +255,6 @@ footer {
   }
   .center_heading {
     margin-bottom: 2rem;
-
     h1 {
       font-size: 2.2rem;
     }
@@ -242,13 +277,45 @@ footer {
   header {
     margin: 2rem 0 3rem 0;
   }
-  nav {
-    visibility: hidden;
-  }
-  .hamburger {
+  .open {
+    visibility: visible;
     display: block;
+  }
+  .toggle_cta {
+    .open {
+      visibility: hidden;
+    }
+    .close {
+      visibility: visible;
+      // border: solid 1pt rgb(107, 159, 176);
+    }
+  }
+  .dropdown_content {
+    display: none;
     position: absolute;
-    right: 0;
+    top: 60px;
+    width: 100%;
+    height: fit-content;
+    padding: 0.3rem 0;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    li {
+      display: block;
+      text-align: center;
+      margin: 1rem;
+      font-size: 1.3rem;
+      span {
+        display: none;
+      }
+    }
+    ul li:nth-child(3) {
+      border-bottom: solid 1pt hsl(231, 7%, 65%);
+      padding-bottom: 1.2rem;
+    }
+  }
+  .show {
+    display: block;
   }
   .demo_cta h5 {
     letter-spacing: 1.3px;
@@ -262,8 +329,6 @@ footer {
     position: relative;
     left: 0;
     top: 0;
-    width: 100%;
-    // background: #0ddbf7;
   }
   .image_container img {
     width: 100%;
