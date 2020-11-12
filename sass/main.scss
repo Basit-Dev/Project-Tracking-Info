@@ -61,19 +61,18 @@ header {
   margin-top: 2.5rem;
 }
 // MOBILE MENU ICONS
-.open {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
+.hamburger {
   :hover {
     cursor: pointer;
   }
+  .open,
+  .close {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+  }
 }
-.close {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-}
+
 // END OF MOBILE MENU ICONS
 
 // NAV BAR
@@ -199,7 +198,7 @@ footer {
 }
 // END OF FOOTER
 
-// MOBILE 600PZ
+// MOBILE 600PX
 
 @media only screen and (max-width: 600px) {
   body {
@@ -212,10 +211,13 @@ footer {
     margin: 2rem 0 3rem 0;
     position: relative;
   }
-  .open {
-    visibility: visible;
-    display: block;
+  .hamburger {
+    .open {
+      visibility: visible;
+      display: block;
+    }
   }
+  // SHOW OPEN OR CLOSE ICONS
   .toggle_cta {
     .open {
       visibility: hidden;
@@ -224,6 +226,10 @@ footer {
       visibility: visible;
       // border: solid 1pt rgb(107, 159, 176);
     }
+  }
+   // THIS MEANS SHOW myDropdown AND THEN DISPLAY dropdown_content
+   .show {
+    display: block;
   }
   .dropdown_content {
     display: none;
@@ -249,9 +255,7 @@ footer {
       padding-bottom: 1.2rem;
     }
   }
-  .show {
-    display: block;
-  }
+
   .demo_cta h5 {
     letter-spacing: 1.3px;
     margin-left: 0.5rem;
@@ -306,10 +310,13 @@ footer {
   header {
     margin: 2rem 0 3rem 0;
   }
-  .open {
-    visibility: visible;
-    display: block;
+  .hamburger {
+    .open {
+      visibility: visible;
+      display: block;
+    }
   }
+    // SHOW OPEN OR CLOSE ICONS
   .toggle_cta {
     .open {
       visibility: hidden;
@@ -319,6 +326,10 @@ footer {
       // border: solid 1pt rgb(107, 159, 176);
     }
   }
+    // THIS MEANS SHOW myDropdown AND THEN DISPLAY dropdown_content
+    .show {
+      display: block;
+    }
   .dropdown_content {
     display: none;
     position: absolute;
@@ -342,9 +353,6 @@ footer {
       border-bottom: solid 1pt hsl(231, 7%, 65%);
       padding-bottom: 1.2rem;
     }
-  }
-  .show {
-    display: block;
   }
   .demo_cta h5 {
     letter-spacing: 1.3px;

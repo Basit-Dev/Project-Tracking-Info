@@ -60,16 +60,11 @@ header {
   margin-top: 2.5rem;
 }
 
-.open {
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-}
-.open :hover {
+.hamburger :hover {
   cursor: pointer;
 }
-
-.close {
+.hamburger .open,
+.hamburger .close {
   visibility: hidden;
   position: absolute;
   right: 0;
@@ -204,7 +199,7 @@ footer {
     position: relative;
   }
 
-  .open {
+  .hamburger .open {
     visibility: visible;
     display: block;
   }
@@ -214,6 +209,10 @@ footer {
   }
   .toggle_cta .close {
     visibility: visible;
+  }
+
+  .show {
+    display: block;
   }
 
   .dropdown_content {
@@ -239,10 +238,6 @@ footer {
   .dropdown_content ul li:nth-child(3) {
     border-bottom: solid 1pt #a0a1ac;
     padding-bottom: 1.2rem;
-  }
-
-  .show {
-    display: block;
   }
 
   .demo_cta h5 {
@@ -300,7 +295,7 @@ footer {
     margin: 2rem 0 3rem 0;
   }
 
-  .open {
+  .hamburger .open {
     visibility: visible;
     display: block;
   }
@@ -310,6 +305,10 @@ footer {
   }
   .toggle_cta .close {
     visibility: visible;
+  }
+
+  .show {
+    display: block;
   }
 
   .dropdown_content {
@@ -335,10 +334,6 @@ footer {
   .dropdown_content ul li:nth-child(3) {
     border-bottom: solid 1pt #a0a1ac;
     padding-bottom: 1.2rem;
-  }
-
-  .show {
-    display: block;
   }
 
   .demo_cta h5 {
