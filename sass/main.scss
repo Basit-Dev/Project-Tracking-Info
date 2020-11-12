@@ -227,10 +227,6 @@ footer {
       // border: solid 1pt rgb(107, 159, 176);
     }
   }
-   // THIS MEANS SHOW myDropdown AND THEN DISPLAY dropdown_content
-   .show {
-    display: block;
-  }
   .dropdown_content {
     display: none;
     position: absolute;
@@ -254,6 +250,10 @@ footer {
       border-bottom: solid 1pt hsl(231, 7%, 65%);
       padding-bottom: 1.2rem;
     }
+  }
+  // THIS MEANS SHOW myDropdown AND THEN DISPLAY dropdown_content
+  .show {
+    display: block;
   }
 
   .demo_cta h5 {
@@ -313,10 +313,10 @@ footer {
   .hamburger {
     .open {
       visibility: visible;
-      display: block;
+      // display: block;
     }
   }
-    // SHOW OPEN OR CLOSE ICONS
+  // SHOW OPEN OR CLOSE ICONS
   .toggle_cta {
     .open {
       visibility: hidden;
@@ -326,10 +326,6 @@ footer {
       // border: solid 1pt rgb(107, 159, 176);
     }
   }
-    // THIS MEANS SHOW myDropdown AND THEN DISPLAY dropdown_content
-    .show {
-      display: block;
-    }
   .dropdown_content {
     display: none;
     position: absolute;
@@ -353,6 +349,10 @@ footer {
       border-bottom: solid 1pt hsl(231, 7%, 65%);
       padding-bottom: 1.2rem;
     }
+  }
+  // THIS MEANS SHOW myDropdown AND THEN DISPLAY dropdown_content
+  .show {
+    display: block;
   }
   .demo_cta h5 {
     letter-spacing: 1.3px;
